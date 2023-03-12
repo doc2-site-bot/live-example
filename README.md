@@ -23,7 +23,7 @@ npm run dev
 
 Open <http://localhost:3000> with your browser to see the result. Modify the [main.js](./main.js) or [main.css](./main.css) files then refresh the page to see the changes applied.
 
-## Static files
+## How does it work ?
 
 By default, doc2.live will assemble `head`, `header` and `footer` fragments of a published page. A custom [head.html](./head.html) can be provided to extend and link to other static files like a favicon, scripts and styles.
 
