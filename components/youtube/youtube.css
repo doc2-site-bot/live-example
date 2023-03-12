@@ -1,0 +1,9 @@
+web-youtube {
+    display: flex;
+    margin: var(--size-200) auto;
+}
+
+web-youtube iframe {
+    width: 100%;
+    border: none;
+}

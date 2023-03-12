@@ -1,0 +1,168 @@
+:root {
+    --font-family: Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+    --link: rgb(2, 101, 220);
+    --link-hover: rgb(0, 84, 182);
+    --link-active: rgb(0, 68, 145);
+  
+    --gray-0: rgb(0, 0, 0);
+    --gray-10: rgb(34, 34, 34);
+    --gray-20: rgb(70, 70, 70);
+    --gray-30: rgb(109, 109, 109);
+    --gray-70: rgb(213, 213, 213);
+    --gray-80: rgb(230, 230, 230);
+    --gray-90: rgb(248, 248, 248);
+    --gray-100: rgb(255, 255, 255);
+    
+    --font-size-xs: 14px;
+    --font-size-s: 16px;
+    --font-size-m: 20px;
+    --font-size-l: 22px;
+    --font-size-xl: 28px;
+    --font-size-xxl: 45px;
+    
+    --size-10: 1px;
+    --size-25: 2px;
+    --size-50: 4px;
+    --size-100: 8px;
+    --size-200: 16px;
+    --size-225: 18px;
+    --size-250: 20px;
+    --size-300: 24px;
+    --size-400: 32px;
+    --size-600: 48px;
+    --size-800: 64px;
+    --size-1200: 96px;
+    --size-2400: 192px;
+    --size-3000: 240px;
+    
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+    line-height: var(--size-300);
+    font-weight: normal;
+  
+    color: var(--gray-10);
+    background-color: var(--gray-100);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  header:empty, footer:empty {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-200);
+    box-sizing: border-box;
+    background-color: var(--gray-90);
+  }
+
+  header strong {
+    font-size: var(--font-size-s);
+  }
+
+  header p {
+    margin: 0;
+  }
+
+  header ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: var(--size-200);
+  }
+  
+  header ul li a {
+    text-align: center;
+    color: var(--gray-10);
+  }
+
+  header ul li a:is(:hover, :active) {
+    color: var(--gray-30);
+    text-decoration: none;
+  }
+
+  header ul li a.current {
+    font-weight: bold;
+  }
+
+  main {
+    max-width: 680px;
+    box-sizing: border-box;
+    padding: var(--size-400);
+    margin: auto;
+  }
+
+  footer {
+    text-align: center;
+    background-color: var(--gray-90);
+    padding: var(--size-200);
+  }
+
+  footer p {
+    font-size: var(--font-size-s);
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    outline: none;
+    color: var(--link);
+  }
+
+  a:active {
+    color: var(--link-active);
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 1.5rem 0;
+    font-size: var(--font-size-s);
+  }
+
+  h1 {
+    margin: 3rem 0;
+    font-size: var(--font-size-xxl);
+    line-height: var(--font-size-xxl);
+  }
+
+  h2 {
+    margin: 2.5rem 0;
+    font-size: var(--font-size-xl);
+    line-height: var(--font-size-xl);
+  }
+
+  main p:has(img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main p img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  var {
+    display: none;
+  }
