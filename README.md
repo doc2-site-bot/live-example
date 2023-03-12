@@ -1,6 +1,9 @@
 # Site example with doc2.live
 
-The demo showcases how the doc2.site published content from Google Docs is assembled by doc2.live to build a website enhanced with client-side JavaScript and CSS.
+The demo showcases how the doc2.live service: 
+- assembles project specific published content on the fly
+- delivers HTML pages on project unique subdomains 
+- enhances HTML with client-side JavaScript and CSS hosted on GitHub pages
 
 ## Live demo
 
