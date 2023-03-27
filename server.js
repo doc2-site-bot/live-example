@@ -1,5 +1,6 @@
 import express from 'express';
 import proxy from 'express-http-proxy';
+import nocache from 'nocache';
 import brotli from 'brotli';
 import fs from 'node:fs';
 
@@ -7,7 +8,8 @@ const project = 'bda43ee8-922b-48e1-b284-9c55670e08f8';
 const app = express();
 const head = fs.readFileSync('./head.html', 'utf-8');
 
-app.use(express.static('.'))
+app.use(nocache());
+app.use(express.static('.'));
 app.use(
   '/',
   proxy(`https://dev--${project}.doc2.live`, {
