@@ -4,7 +4,7 @@ import nocache from 'nocache';
 import brotli from 'brotli';
 import fs from 'node:fs';
 
-const project = 'bda43ee8-922b-48e1-b284-9c55670e08f8';
+const subdomain = 'livedemo';
 const app = express();
 const head = fs.readFileSync('./head.html', 'utf-8');
 
@@ -12,7 +12,7 @@ app.use(nocache());
 app.use(express.static('.'));
 app.use(
   '/',
-  proxy(`https://dev--${project}.doc2.live`, {
+  proxy(`https://dev--${subdomain}.doc2.live`, {
     userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
       if (String(proxyRes.headers['content-type']).includes('text/html')) {
         const html = new TextDecoder().decode(brotli.decompress(proxyResData));

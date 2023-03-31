@@ -7,7 +7,7 @@ The demo showcases how the doc2.live service:
 
 ## Live demo
 
-* <https://bda43ee8-922b-48e1-b284-9c55670e08f8.doc2.live>
+* <https://livedemo.doc2.live>
 
 ## Content source
 
