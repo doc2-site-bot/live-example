@@ -2,7 +2,6 @@
   {
     "select": {
       ":host": {
-        "class": "my-cool-video",
         "slot": "video"
       }
     }
