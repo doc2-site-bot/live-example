@@ -6,6 +6,11 @@
         "height": 64,
         "loading": "eager"
       }
+    },
+    "selectAll": {
+      "web-youtube": {
+        "slot": "video"
+      }
     }
   }
 ]

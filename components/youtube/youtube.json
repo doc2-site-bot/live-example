@@ -1,9 +1,0 @@
-[
-  {
-    "select": {
-      ":host": {
-        "slot": "video"
-      }
-    }
-  }
-]

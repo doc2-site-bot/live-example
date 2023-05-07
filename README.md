@@ -26,12 +26,12 @@ Open <http://localhost:3000> with your browser to see the result. Modify the [in
 
 ## How does it work ?
 
-By default, doc2.live will assemble `head`, `header` and `footer` fragments of a published page. A custom [head.html](./head.html) can be provided to extend and link to other static files like a favicon, scripts and styles.
-The [index.json](./index.json) file allows to globally modify the html by setting custom properties to selected elements. 
+By default, doc2.live will assemble `head`, `header` and `footer` fragments of a published page. A custom [head.html](./head.html) can be provided to extend and link to other static files like a favicon, scripts and styles. 
 
 [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are loaded dynamically per page and the tag names are prefixed with `web-` see the [youtube](./components/youtube/youtube.js) component as example.
-Similar to the `index.json` file, the [youtube.json](./components/youtube/youtube.json) allows to modify the web component html by setting custom properties to the selected elements.
-Finally, the [youtube.html](./components/youtube/youtube.html) is used to defined [Declarative Shadow DOM](https://developer.chrome.com/en/articles/declarative-shadow-dom/), a new way to implement and use Shadow DOM directly in HTML. 
+The [youtube.html](./components/youtube/youtube.html) template is used to defined [Declarative Shadow DOM](https://developer.chrome.com/en/articles/declarative-shadow-dom/), a new way to implement and use Shadow DOM directly in HTML.
+
+Finally, The [index.json](./index.json) file allows to globally modify the html by setting custom properties to selected elements before it is returned to the client.
 
 ## Deployment
 
