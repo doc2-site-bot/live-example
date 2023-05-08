@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-div {
+.preview {
     position: relative;
     width: 100%;
     height: 400px;
@@ -36,6 +36,11 @@ button {
 }
 
 iframe {
+    display: none;
     width: 100%;
     border: none;
+}
+
+iframe[src] {
+    display: block;
 }
