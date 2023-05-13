@@ -157,12 +157,6 @@ h2 {
     line-height: var(--font-size-xl);
 }
 
-main p:has(img) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 main p img {
     max-width: 100%;
     object-fit: cover;
