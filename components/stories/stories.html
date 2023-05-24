@@ -1,0 +1,15 @@
+<template shadowrootmode="open">
+    <div>
+        <slot name="heading"></slot>
+        <hr>
+        <slot name="description"></slot>
+        <div>
+            <slot name="stories"></slot>
+        </div>
+    </div>
+</template>
+<template itemscope itemtype="https://schema.org/Thing" data-offset="0" data-limit="2">
+    <a itemprop="url" href="url">
+        <h1 itemprop="title"></h1>
+    </a>
+</template>
