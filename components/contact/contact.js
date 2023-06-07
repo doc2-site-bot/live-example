@@ -44,6 +44,23 @@ class Contact extends HTMLElement {
                 },
             });
         };
+
+        // Load turnstile on viewport intersection
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const script = document.createElement('script');
+                    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback';
+                    document.head.append(script);
+
+                    observer.disconnect();
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0
+        });
+        observer.observe(this);
     }
 }
 
