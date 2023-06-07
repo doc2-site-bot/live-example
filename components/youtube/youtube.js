@@ -2,29 +2,19 @@ class YouTube extends HTMLElement {
     constructor() {
         super();
 
-        const src = new URL(this.getAttribute('source'));
-        this._id = src.searchParams.get('v');
+        const { searchParams } = new URL(this.getAttribute('source'));
+        const id = searchParams.get('v');
 
-        const img = this.shadowRoot?.querySelector('img');
-        if (img) {
-            img.src = `https://i.ytimg.com/vi/${this._id}/hqdefault.jpg`;
-        }
+        const img = this.querySelector('img');
+        img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 
-        this.onclick = () => {
-            if (!this._loadYT) {
-                this._loadYT = true;
+        this.addEventListener('click', () => {
+            const iframe = this.querySelector('iframe');
+            iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
 
-                const iframe = this.shadowRoot?.querySelector('iframe');
-                if (iframe) {
-                    iframe.src = `https://www.youtube.com/embed/${this._id}?autoplay=1`;
-                }
-
-                const preview = this.shadowRoot?.querySelector('.preview');
-                if (preview) {
-                    preview.remove();
-                }
-            }
-        }
+            const preview = this.querySelector('div');
+            preview.remove();
+        }, { once: true});
     }
 }
 

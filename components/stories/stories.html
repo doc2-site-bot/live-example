@@ -1,15 +1,14 @@
 <template shadowrootmode="open">
-    <div>
-        <slot name="heading"></slot>
-        <hr>
-        <slot name="description"></slot>
-        <div>
-            <slot name="stories"></slot>
-        </div>
-    </div>
+    <section part="wrapper">
+        <slot></slot>
+    </section>
 </template>
-<template itemscope itemtype="https://schema.org/Thing" data-offset="0" data-limit="2">
+
+<!-- Sheet row template where itemtype maps to spreadsheet identifier -->
+<template itemscope itemtype="urn:spreadsheet:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_/1VOefY3GwmSu7fTnmu9y348k-VcSo4fEadioNQ6w1Ig4/0" data-search-params="?offset=0&limit=10">
+    <!-- Target sheet row "url" property and set it for "href" attribute -->
     <a itemprop="url" href="url">
-        <h1 itemprop="title"></h1>
+        <!-- Target sheet row "title" property and set as h3 text content by default -->
+        <h3 itemprop="title"></h3>
     </a>
 </template>

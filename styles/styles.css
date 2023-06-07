@@ -1,9 +1,18 @@
+/* Global */
 :root {
-    --font-family: system-ui, sans-serif;
+    --font-family: Avenir, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --cta: rgb(4, 105, 227);
+    --cta-hover: rgb(0, 87, 190);
+    --cta-active: rgb(0, 72, 153);
 
     --link: rgb(2, 101, 220);
     --link-hover: rgb(0, 84, 182);
     --link-active: rgb(0, 68, 145);
+
+    --dark-link: rgb(64, 150, 243);
+    --dark-link-hover: rgb(94, 170, 247);
+    --dark-link-active: rgb(124, 189, 250);
 
     --gray-0: rgb(0, 0, 0);
     --gray-10: rgb(34, 34, 34);
@@ -13,6 +22,10 @@
     --gray-80: rgb(230, 230, 230);
     --gray-90: rgb(248, 248, 248);
     --gray-100: rgb(255, 255, 255);
+
+    --box-shadow: 0px 2px 5px var(--gray-70);
+
+    --animation-duration: 200ms;
 
     --font-size-xs: 14px;
     --font-size-s: 16px;
@@ -36,6 +49,9 @@
     --size-2400: 192px;
     --size-3000: 240px;
 
+    --header-height: 64px;
+    --layout-width: 1280px;
+
     font-family: var(--font-family);
     font-size: var(--font-size-s);
     line-height: var(--size-300);
@@ -51,15 +67,24 @@
     -webkit-text-size-adjust: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 header:empty, footer:empty {
+    display: none;
+}
+
+var {
     display: none;
 }
 
@@ -68,55 +93,85 @@ header:empty, footer:empty {
     display: none;
 }
 
+/* Layout */
 header {
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    background-color: var(--gray-100);
+    border-bottom: var(--size-10) solid var(--gray-80);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+header div {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--size-200);
-    box-sizing: border-box;
-    background-color: var(--gray-90);
-}
-
-header strong {
-    font-size: var(--font-size-s);
-}
-
-header p {
-    margin: 0;
-}
-
-header ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
+    height: 100%;
+    padding: 0 var(--size-200);
     gap: var(--size-200);
 }
 
-header ul li a {
-    text-align: center;
-    color: var(--gray-10);
+header div a {
+    color: var(--gray-0);
+    font-size: calc( var(--size-200) - var(--size-10) );
+    white-space: nowrap;
 }
 
-header ul li a:is(:hover, :active) {
-    color: var(--gray-30);
+header div a:hover {
+    color: var(--gray-0);
     text-decoration: none;
 }
 
-header ul li a.current {
+header picture {
+    display: flex;
+}
+
+header ul {
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    gap: var(--size-200);
+    box-sizing: border-box;
+    padding: 0 var(--size-100);
+}
+
+header ul a {
+    outline: none;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: var(--size-100);
+    border-radius: var(--size-100);
+    font-weight: 300;
+    color: var(--gray-0);
+}
+
+header ul a.current {
+    background-color: var(--gray-80);
     font-weight: bold;
 }
 
+header ul a:hover {
+    background-color: var(--gray-80);
+    color: var(--gray-10);
+    text-decoration: none;
+}
+
 main {
-    max-width: 680px;
-    box-sizing: border-box;
+    max-width: var(--layout-width);
     padding: var(--size-400);
     margin: auto;
 }
 
 footer {
-    text-align: center;
-    background-color: var(--gray-90);
+    text-align: right;
+    background-color: var(--gray-100);
     padding: var(--size-200);
+    border-top: var(--size-10) solid var(--gray-80);
 }
 
 footer p {
@@ -124,6 +179,7 @@ footer p {
     margin: 0;
 }
 
+/* Basic styles */
 a {
     text-decoration: none;
     outline: none;
@@ -141,27 +197,33 @@ a:hover {
 }
 
 p {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     font-size: var(--font-size-s);
+    color: var(--gray-20);
 }
 
 h1 {
-    margin: 3rem 0;
     font-size: var(--font-size-xxl);
     line-height: var(--font-size-xxl);
 }
 
 h2 {
-    margin: 2.5rem 0;
     font-size: var(--font-size-xl);
     line-height: var(--font-size-xl);
 }
 
 main p img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-var {
-    display: none;
+/* Landing specific */
+.landing main {
+    max-width: none;
+    padding: 0;
+}
+
+/* Stories specific */
+.story main {
+    max-width: calc(var(--layout-width) / 2);
 }

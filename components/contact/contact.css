@@ -1,0 +1,12 @@
+web-contact {
+    display: block;
+    background-color: var(--gray-90);
+}
+
+web-contact::part(wrapper) {
+    padding: var(--size-800) var(--size-400);
+    max-width: var(--layout-width);
+    margin: auto;
+    display: flex;
+    gap: var(--size-400);
+}

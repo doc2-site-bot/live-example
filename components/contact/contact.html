@@ -1,0 +1,32 @@
+<template shadowrootmode="open">
+    <!-- Shadow DOM styles -->
+    <link rel="stylesheet" href="/components/contact/form.css">
+
+    <section part="wrapper">
+        <div>
+            <slot></slot>
+        </div>
+        <form part="form">
+            <div>
+                <input type="hidden" name="date">
+
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name">
+                </label>
+
+                <label>
+                    <span>Body</span>
+                    <textarea name="body"></textarea>
+                </label>
+
+                <slot name="turnstile"></slot>
+
+                <button>Submit</button>
+            </div>
+            <div hidden>Thank you for submitting your story !</div>
+        </form>
+    </section>
+</template>
+
+<div slot="turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAAAEhZ_W5F6wAHa1_" data-theme="light"></div>
