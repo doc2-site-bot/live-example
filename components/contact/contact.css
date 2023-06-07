@@ -8,5 +8,6 @@ web-contact::part(wrapper) {
     max-width: var(--layout-width);
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: var(--size-400);
 }
