@@ -1,5 +1,5 @@
 web-columns-item {
-    padding: 0 var(--size-400);
+    padding: var(--size-400);
     max-width: var(--layout-width);
     margin: auto;
     display: flex;

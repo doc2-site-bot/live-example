@@ -40,7 +40,7 @@ By default, doc2.live will assemble `head`, `header` and `footer` fragments of a
 [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are loaded dynamically per page and the tag names are prefixed with `web-` see the [contact](./components/contact/contact.js) component as example.
 The [contact.html](./components/contact/contact.html) template is used to defined [Declarative Shadow DOM](https://developer.chrome.com/en/articles/declarative-shadow-dom/), a new way to implement and use Shadow DOM directly in HTML.
 
-Finally, The [ssr.json](./ssr.json) file allows to globally modify the html by setting custom properties to selected elements before it is returned to the client.
+Finally, the [SSR configuration](./doc2.live.config.json) file allows to globally modify the html by setting custom properties to selected elements before it is returned to the client.
 
 ## Deployment
 
