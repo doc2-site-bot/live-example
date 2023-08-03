@@ -2,7 +2,7 @@ class Contact extends HTMLElement {
     constructor() {
         super();
 
-        const [spreadsheetId, sheetId] = this.getAttribute('file').split('/').slice(-2);
+        const [spreadsheetId, sheetId] = this.getAttribute('submissions').split('/').slice(-2);
 
         const form = this.shadowRoot.querySelector('form');
         const button = form.querySelector('button');
@@ -23,7 +23,7 @@ class Contact extends HTMLElement {
                   operation: 'append',
                   rows: [{
                       name: formData.get('name'),
-                      body: formData.get('body'),
+                      submission: formData.get('submission'),
                       date: new Date().toISOString()
                   }]
                 }),

@@ -214,7 +214,10 @@ h2 {
 
 main p img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    height: 500px;
+    background-color: var(--gray-90);
+    border-radius: var(--size-50);
 }
 
 /* Landing specific */
@@ -225,5 +228,5 @@ main p img {
 
 /* Stories specific */
 .story main {
-    max-width: calc(var(--layout-width) / 2);
+    max-width: calc(var(--layout-width) / 1.5);
 }

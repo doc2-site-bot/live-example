@@ -1,14 +1,15 @@
 <template shadowrootmode="open">
-    <section part="wrapper">
+    <div part="wrapper">
         <slot></slot>
-    </section>
+    </div>
 </template>
 
-<!-- Sheet row template where itemtype maps to spreadsheet identifier -->
-<template itemscope itemtype="urn:spreadsheet:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_/1VOefY3GwmSu7fTnmu9y348k-VcSo4fEadioNQ6w1Ig4/0" data-search-params="?offset=0&limit=10">
-    <!-- Target sheet row "url" property and set it for "href" attribute -->
-    <a itemprop="url" href="url">
-        <!-- Target sheet row "title" property and set as h3 text content by default -->
+<template
+    itemscope
+    itemtype="urn:docs:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_"
+    data-engine="JMESPath"
+    data-query="reverse(sort_by([?starts_with(path, '/stories')], &publishedAt)[*].{path: path, title: meta.title, publishedAt: publishedAt})">
+    <a itemprop="path" href="path">
         <h3 itemprop="title"></h3>
     </a>
 </template>

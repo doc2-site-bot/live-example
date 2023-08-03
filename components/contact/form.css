@@ -4,7 +4,7 @@ form {
     background-color: var(--gray-100);
     border-radius: var(--size-100);
     padding: var(--size-400);
-    flex: 1;
+    margin-bottom: var(--size-400);
 }
 
 form div:first-child {

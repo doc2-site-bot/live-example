@@ -5,9 +5,6 @@ web-contact {
 
 web-contact::part(wrapper) {
     padding: var(--size-800) var(--size-400);
-    max-width: var(--layout-width);
+    max-width: calc(var(--layout-width) / 1.5);
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--size-400);
 }

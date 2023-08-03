@@ -2,10 +2,9 @@
     <!-- Shadow DOM styles -->
     <link rel="stylesheet" href="/components/contact/form.css">
 
-    <section part="wrapper">
-        <div>
-            <slot></slot>
-        </div>
+    <div part="wrapper">
+        <slot></slot>
+
         <form part="form">
             <div>
                 <input type="hidden" name="date">
@@ -16,8 +15,8 @@
                 </label>
 
                 <label>
-                    <span>Body</span>
-                    <textarea name="body"></textarea>
+                    <span>Submission</span>
+                    <textarea name="submission"></textarea>
                 </label>
 
                 <slot name="turnstile"></slot>
@@ -26,7 +25,19 @@
             </div>
             <div hidden>Thank you for submitting your story !</div>
         </form>
-    </section>
+
+        <slot name="example"></slot>
+    </div>
+</template>
+
+<template
+        itemscope
+        itemtype="urn:spreadsheets:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_:1Ji5XuASqyWfqSSmJM0KGxsvJ1HGphNMpuJl26zzmZ4U:0"
+        data-engine="JMESPath"
+        data-query="rows[-1:]"
+        slot="example">
+    <h4>Latest submission by <span itemprop="name"></span></h4>
+    <p itemprop="submission"></p>
 </template>
 
 <div slot="turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAAAEhZ_W5F6wAHa1_" data-theme="light"></div>
