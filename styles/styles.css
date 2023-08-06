@@ -204,12 +204,12 @@ p {
 
 h1 {
     font-size: var(--font-size-xxl);
-    line-height: var(--font-size-xxl);
+    line-height: 1.4;
 }
 
 h2 {
     font-size: var(--font-size-xl);
-    line-height: var(--font-size-xl);
+    line-height: 1.2;
 }
 
 main p img {

@@ -12,10 +12,9 @@ web-announcement::part(wrapper) {
 
 web-announcement h2 {
     margin-top: 0;
-    margin-bottom: var(--size-200);
+    margin-bottom: var(--size-300);
     color: var(--gray-100);
     font-size: var(--font-size-xl);
-    line-height: 1.3;
 }
 
 web-announcement p {
