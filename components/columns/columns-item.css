@@ -56,8 +56,12 @@ web-columns-item [slot="action"] a:hover {
 }
 
 web-columns-item [slot="illustration"] {
-    padding: var(--size-800);
+    padding: 0 var(--size-200);
     margin: 0;
+}
+
+web-columns-item [slot="illustration"] img {
+    height: auto;
 }
 
 web-columns-item [slot="text"] {
