@@ -1,7 +1,9 @@
 class Contact extends HTMLElement {
     constructor() {
         super();
+    }
 
+    connectedCallback() {
         const [spreadsheetId, sheetId] = this.getAttribute('submissions').split('/').slice(-2);
 
         const form = this.shadowRoot.querySelector('form');
@@ -19,13 +21,13 @@ class Contact extends HTMLElement {
                 },
                 method: 'PATCH',
                 body: JSON.stringify({
-                  'cf-turnstile-response': formData.get('cf-turnstile-response'),
-                  operation: 'append',
-                  rows: [{
-                      name: formData.get('name'),
-                      submission: formData.get('submission'),
-                      date: new Date().toISOString()
-                  }]
+                    'cf-turnstile-response': formData.get('cf-turnstile-response'),
+                    operation: 'append',
+                    rows: [{
+                        name: formData.get('name'),
+                        submission: formData.get('submission'),
+                        date: new Date().toISOString()
+                    }]
                 }),
             });
 
