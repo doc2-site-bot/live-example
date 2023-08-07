@@ -4,8 +4,7 @@ export default class Component extends HTMLElement {
         super();
 
         this.querySelectorAll("template[shadowrootmode]").forEach(template => {
-            const mode = template.getAttribute("shadowrootmode");
-            const shadowRoot = template.parentNode.attachShadow({ mode });
+            const shadowRoot = this.shadowRoot || this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content);
             template.remove();
         });
