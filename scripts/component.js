@@ -1,12 +1,13 @@
 // Source: https://developer.chrome.com/en/articles/declarative-shadow-dom/
-document.addEventListener('DOMContentLoaded', () => {
-    (function attachShadowRoots(root) {
-        root.querySelectorAll("template[shadowrootmode]").forEach(template => {
+export default class Component extends HTMLElement {
+    constructor() {
+        super();
+
+        this.querySelectorAll("template[shadowrootmode]").forEach(template => {
             const mode = template.getAttribute("shadowrootmode");
             const shadowRoot = template.parentNode.attachShadow({ mode });
             shadowRoot.appendChild(template.content);
             template.remove();
-            attachShadowRoots(shadowRoot);
         });
-    })(document);
-});
+    }
+}

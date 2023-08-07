@@ -1,4 +1,6 @@
-class YouTube extends HTMLElement {
+import Component from "../../scripts/component.js";
+
+class YouTube extends Component {
     constructor() {
         super();
 

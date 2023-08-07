@@ -1,4 +1,6 @@
-class Contact extends HTMLElement {
+import Component from "../../scripts/component.js";
+
+class Contact extends Component {
     constructor() {
         super();
     }
