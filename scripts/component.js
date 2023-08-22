@@ -3,10 +3,11 @@ export default class Component extends HTMLElement {
     constructor() {
         super();
 
-        this.querySelectorAll("template[shadowrootmode]").forEach(template => {
+        const template = this.querySelector(":scope > template[shadowrootmode]");
+        if (template) {
             const shadowRoot = this.shadowRoot || this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content);
             template.remove();
-        });
+        }
     }
 }
