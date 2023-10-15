@@ -1,7 +1,7 @@
 web-hero {
     display: block;
     padding: var(--size-1200) 0;
-    background: linear-gradient(90deg, rgb(229, 46, 113), rgb(255, 138, 0));
+    background: linear-gradient(90deg, rgb(24, 196, 255), var(--cta));
 }
 
 web-hero::part(wrapper) {
