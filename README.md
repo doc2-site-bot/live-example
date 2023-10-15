@@ -9,6 +9,7 @@ The demo showcases how the doc2.live service:
 - Assembles and renders document and sheet fragments
 - Modifies the server side rendered HTML
 - Enhances HTML with client-side JavaScript and CSS hosted on Cloudflare Pages
+- Supports multi-branch preview e.g. <https://custom-hero-bg--preview--demo.doc2.live>
 - Delivers server-side rendered [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) with [Shadom DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - Embeds youtube video as web component
 - Renders sheet data with a given template
