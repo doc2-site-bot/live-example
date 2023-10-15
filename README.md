@@ -8,7 +8,7 @@ The demo showcases how the doc2.live service:
 - Delivers HTML pages on the project subdomain <https://demo.doc2.live>
 - Assembles and renders document and sheet fragments
 - Modifies the server side rendered HTML
-- Enhances HTML with client-side JavaScript and CSS hosted on GitHub pages
+- Enhances HTML with client-side JavaScript and CSS hosted on Cloudflare Pages
 - Delivers server-side rendered [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) with [Shadom DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - Embeds youtube video as web component
 - Renders sheet data with a given template
@@ -44,7 +44,7 @@ Finally, the [SSR configuration](./doc2.live.config.json) allows to globally mod
 
 ## Deployment
 
-The static files are deployed via [GitHub Pages](https://pages.github.com/) e.g. <https://doc2-site-bot.github.io/live-example/styles/styles.css> and proxied as defined in <https://docs.google.com/spreadsheets/d/1Px85-PSykVc_Z0LIaW7SuM4x5gqi4EV2F_kF6UWIK0w/edit#gid=0>.
+The static files are deployed via [Cloudflare Pages](https://pages.cloudflare.com/) e.g. <https://live-example.pages.dev/styles/styles.css> and proxied as defined in <https://docs.google.com/spreadsheets/d/1Px85-PSykVc_Z0LIaW7SuM4x5gqi4EV2F_kF6UWIK0w/edit#gid=0>.
 
 ## Resources
 
