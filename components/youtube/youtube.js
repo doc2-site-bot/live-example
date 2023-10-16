@@ -1,6 +1,6 @@
 import Component from "../../scripts/component.js";
 
-class YouTube extends Component {
+customElements.define('web-youtube', class extends Component {
     constructor() {
         super();
 
@@ -18,6 +18,4 @@ class YouTube extends Component {
             preview.remove();
         }, { once: true});
     }
-}
-
-customElements.define('web-youtube', YouTube);
+});

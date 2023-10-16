@@ -1,6 +1,14 @@
+/* Font fallback */
+@font-face {
+    font-family: roboto-fallback;
+    size-adjust: 100.06%;
+    ascent-override: 95%;
+    src: local('Arial');
+}
+
 /* Global */
 :root {
-    --font-family: Avenir, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family: roboto, roboto-fallback;
 
     --cta: rgb(4, 105, 227);
     --cta-hover: rgb(0, 87, 190);
@@ -31,7 +39,7 @@
     --font-size-s: 16px;
     --font-size-m: 20px;
     --font-size-l: 22px;
-    --font-size-xl: 28px;
+    --font-size-xl: 32px;
     --font-size-xxl: 45px;
 
     --size-10: 1px;
@@ -54,7 +62,7 @@
 
     font-family: var(--font-family);
     font-size: var(--font-size-s);
-    line-height: var(--size-300);
+    line-height: 1.5;
     font-weight: normal;
 
     color: var(--gray-10);
@@ -106,24 +114,13 @@ header {
     z-index: 10;
 }
 
-header div {
+header > a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding: 0 var(--size-200);
     gap: var(--size-200);
-}
-
-header div a {
-    color: var(--gray-0);
-    font-size: calc( var(--size-200) - var(--size-10) );
-    white-space: nowrap;
-}
-
-header div a:hover {
-    color: var(--gray-0);
-    text-decoration: none;
 }
 
 header picture {
@@ -205,6 +202,7 @@ p {
 h1 {
     font-size: var(--font-size-xxl);
     line-height: 1.4;
+    margin-bottom: var(--size-800);
 }
 
 h2 {
@@ -228,5 +226,5 @@ main p img {
 
 /* Stories specific */
 .story main {
-    max-width: calc(var(--layout-width) / 1.5);
+    max-width: 1000px;
 }

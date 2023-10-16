@@ -1,6 +1,6 @@
 import Component from "../../scripts/component.js";
 
-class Contact extends Component {
+window.customElements.define('web-contact', class extends Component {
     constructor() {
         super();
     }
@@ -68,6 +68,4 @@ class Contact extends Component {
             observer.observe(this);
         });
     }
-}
-
-window.customElements.define('web-contact', Contact);
+});

@@ -25,7 +25,8 @@
           "loading": "eager"
         },
         "header > p": {
-          "tagName": "div"
+          "tagName": "a",
+          "href": "https://doc2.site"
         },
         "header ul li:last-child a": {
           "target": "_blank"

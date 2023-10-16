@@ -23,7 +23,7 @@ web-hero p {
     margin-bottom: var(--size-200);
     color: var(--gray-80);
     line-height: 2rem;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
 }
 
 web-hero a {
