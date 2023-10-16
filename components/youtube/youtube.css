@@ -4,7 +4,7 @@ web-youtube {
     align-items: center;
     justify-content: center;
     background-color: var(--gray-10);
-    padding: var(--size-800) var(--size-400);
+    padding: var(--size-400);
 }
 
 web-youtube div {
