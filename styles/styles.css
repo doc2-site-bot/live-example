@@ -1,14 +1,6 @@
-/* Font fallback */
-@font-face {
-    font-family: roboto-fallback;
-    size-adjust: 100.06%;
-    ascent-override: 95%;
-    src: local('Arial');
-}
-
 /* Global */
 :root {
-    --font-family: roboto, roboto-fallback;
+    --font-family: system-ui, sans-serif;
 
     --cta: rgb(4, 105, 227);
     --cta-hover: rgb(0, 87, 190);
@@ -208,6 +200,7 @@ h1 {
 h2 {
     font-size: var(--font-size-xl);
     line-height: 1.2;
+    margin-bottom: var(--size-400);
 }
 
 main p img {

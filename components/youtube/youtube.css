@@ -14,16 +14,16 @@ web-youtube div {
     max-width: calc(var(--layout-width) / 1.5);
 }
 
-web-youtube img {
-    visibility: hidden;
+web-youtube p {
+    width: 100%;
+    height: 100%;
+}
+
+web-youtube p img {
     width: 100%;
     height: 100%;
     cursor: pointer;
     object-fit: cover;
-}
-
-web-youtube img[src] {
-    visibility: visible;
 }
 
 web-youtube button {

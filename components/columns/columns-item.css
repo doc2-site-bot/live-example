@@ -21,7 +21,6 @@ web-columns-item {
 
 web-columns-item [slot="heading"] {
     margin-top: 0;
-    margin-bottom: var(--size-200);
     color: var(--gray-0);
     font-size: var(--font-size-xl);
     line-height: 1.3;

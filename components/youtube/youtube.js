@@ -7,8 +7,9 @@ customElements.define('web-youtube', class extends Component {
         const { searchParams } = new URL(this.getAttribute('source'));
         const id = searchParams.get('v');
 
-        const img = this.querySelector('img');
-        img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+        const img = this.querySelector('p');
+        const button = this.querySelector('button');
+        button.before(img);
 
         this.addEventListener('click', () => {
             const iframe = this.querySelector('iframe');
