@@ -23,7 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage.classList.add('current');
         }
     }
-
-    // Lazy-load custom fonts
-    document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="/styles/fonts.css"/>`);
 });
