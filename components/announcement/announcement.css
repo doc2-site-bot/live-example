@@ -6,7 +6,7 @@ web-announcement {
 web-announcement::part(wrapper) {
     max-width: calc(var(--layout-width) / 1.5);
     margin: auto;
-    padding: var(--size-800) var(--size-400);
+    padding: var(--size-400);
     text-align: center;
 }
 
