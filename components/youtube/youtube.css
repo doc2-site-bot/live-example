@@ -40,6 +40,7 @@ web-youtube button {
     margin-top: -24px;
     background: transparent;
     border: none;
+    padding: 0;
 }
 
 web-youtube iframe {
