@@ -33,6 +33,9 @@
         }
       },
       "selectAll": {
+        "script[src*='columns'], script[src*='stories'], script[src*='contact'], script[src*='youtube']": {
+          "tagName": "template"
+        },
         "web-columns-item > h2": {
           "slot": "heading"
         },

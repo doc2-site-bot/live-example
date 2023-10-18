@@ -3,6 +3,7 @@ export default class Component extends HTMLElement {
     constructor() {
         super();
 
+        // Polyfill
         const template = this.querySelector(":scope > template[shadowrootmode]");
         if (template) {
             const shadowRoot = this.shadowRoot || this.attachShadow({ mode: "open" });
