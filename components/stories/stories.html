@@ -5,11 +5,13 @@
 </template>
 
 <template
-    itemscope
-    itemtype="urn:docs:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_"
-    data-engine="JMESPath"
-    data-query="reverse(sort_by([?starts_with(path, '/stories')], &publishedAt)[*].{path: path, title: meta.title, publishedAt: publishedAt})">
-    <a itemprop="path" href="path">
-        <h3 itemprop="title"></h3>
+        data-source="https://api.doc2.site/v1/docs/search/SPACE/1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_"
+        data-template-engine="mustache"
+        data-method="POST"
+        data-body="engine=JMESPath&query=reverse(sort_by([?starts_with(path, '/stories')], %26publishedAt)[*].{path: path, title: meta.title, publishedAt: publishedAt})">
+    {{#data}}
+    <a href="{{path}}">
+        <h3>{{title}}</h3>
     </a>
+    {{/data}}
 </template>
