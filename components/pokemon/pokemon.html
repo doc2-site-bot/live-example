@@ -1,0 +1,29 @@
+<template
+        data-source="/_apis/api/v2/pokemon/SEARCH_PARAMS.pokemon"
+        data-template-engine="mustache"
+        data-method="GET"
+        data-headers='{"x-forwarded-api": "pokeapi.co"}'
+        data-query-engine="JMESPath"
+        data-query="{name: name, sprites: {front: sprites.front_default, back: sprites.back_default}} ">
+    {{#name}}
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Front</th>
+            <th>Back</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{name}}</td>
+            <td><img alt="{{name}} front" height="96" width="96" src="{{sprites.front}}"/></td>
+            <td><img alt="{{name}} back" height="96" width="96" src="{{sprites.back}}"/></td>
+        </tr>
+        </tbody>
+    </table>
+    {{/name}}
+    {{^name}}
+    <h2>Pokemon not found</h2>
+    {{/name}}
+</template>
