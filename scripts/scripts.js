@@ -2,33 +2,51 @@ const variableMap = {
     year: new Date().getFullYear()
 };
 
+// Non LCP components
+const lazyComponents = [
+    'columns',
+    'stories',
+    'youtube',
+    'contact'
+];
+
+// Build lazy component selector
+let lazyComponentSel = lazyComponents.map(name => `web-${name}`);
+// Add potential items
+lazyComponentSel.forEach(name => lazyComponentSel.push(`${name}-item`));
+lazyComponentSel = lazyComponentSel.join(',');
+
+const loadLazyComponent = (component) => {
+    const name = component.tagName.toLowerCase().replace('web-', '');
+    const template = document.head.querySelector(`template[src*="${name}.js"]`);
+    if (template) {
+        const script = document.createElement('script');
+        [...template.attributes].forEach( attr => { script.setAttribute(attr.nodeName ,attr.nodeValue) });
+        document.head.append(script);
+        template.remove();
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    const lazyLoadedComponents = 'web-columns, web-columns-item, web-stories, web-content, web-youtube, web-contact';
+    // Hydrate on user interaction
+    let isHydrated = false;
+    const hydrate = () => {
+        if (!isHydrated) {
+            document.body.querySelectorAll(lazyComponentSel).forEach((component) => {
+                loadLazyComponent(component);
+            });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(({target, isIntersecting}) => {
-            if (isIntersecting) {
-                // Load component script if template is present
-                const component = target.tagName.toLowerCase().replace('web-', '');
-                const template = document.head.querySelector(`template[src*="${component}.js"]`);
-                if (template) {
-                    const script = document.createElement('script');
-                    [...template.attributes].forEach( attr => { script.setAttribute(attr.nodeName ,attr.nodeValue) });
-                    document.head.append(script);
-                    template.remove();
-                }
+            isHydrated = true;
+        }
+    };
+    window.addEventListener('scroll', hydrate, { once: true, passive: true });
+    window.addEventListener('mousemove', hydrate, { once: true, passive: true });
+    window.addEventListener('touchmove', hydrate, { once: true, passive: true });
+    window.addEventListener('keydown', hydrate, { once: true, passive: true });
 
-                // All scripts are loaded
-                if (!document.head.querySelectorAll(`template[src*='columns'], template[src*='stories'], template[src*='contact'], template[src*='youtube']`).length) {
-                    observer.disconnect();
-                }
-            }
-        });
-    });
-
-    document.body.querySelectorAll(lazyLoadedComponents).forEach((component) => {
-        observer.observe(component);
-    });
+    if (window.scrollY !== 0) {
+        hydrate();
+    }
 
     // Replace variables
     document.body.querySelectorAll('var').forEach((variable) => {
