@@ -31,13 +31,15 @@
 </template>
 
 <template
-        itemscope
-        itemtype="urn:spreadsheets:1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_:1Ji5XuASqyWfqSSmJM0KGxsvJ1HGphNMpuJl26zzmZ4U:0"
-        data-engine="JMESPath"
-        data-query="rows[-1:]"
+        doc2-source="https://api.doc2.site/v1/spreadsheets/search/preview/1n98BBrnbQW3Dzgq0Go6tyJOgk2l95Ee_/1Ji5XuASqyWfqSSmJM0KGxsvJ1HGphNMpuJl26zzmZ4U/0"
+        doc2-template-engine="mustache"
+        doc2-method="POST"
+        doc2-body='engine=JMESPath&query=rows[-1:]'
         slot="example">
-    <strong>Latest submission by <span itemprop="name"></span></strong>
-    <p itemprop="submission"></p>
+    {{#data}}
+        <strong>Latest submission by {{name}}</strong>
+        <p>{{submission}}</p>
+    {{/data}}
 </template>
 
 <div slot="turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAAAEhZ_W5F6wAHa1_" data-theme="light"></div>
