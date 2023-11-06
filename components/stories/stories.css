@@ -10,7 +10,7 @@ web-stories::part(wrapper) {
     text-align: center;
 }
 
-web-stories [data-source] {
+web-stories [doc2-source] {
     display: flex;
     flex-direction: column;
     gap: var(--size-200);
