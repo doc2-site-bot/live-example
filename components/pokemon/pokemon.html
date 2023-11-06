@@ -1,10 +1,10 @@
 <template
-        data-source="/_apis/api/v2/pokemon/SEARCH_PARAMS.pokemon"
-        data-template-engine="mustache"
-        data-method="GET"
-        data-headers='{"x-forwarded-api": "pokeapi.co"}'
-        data-query-engine="JMESPath"
-        data-query="{name: name, sprites: {front: sprites.front_default, back: sprites.back_default}} ">
+        doc2-source="/_apis/api/v2/pokemon/SEARCH_PARAMS.pokemon"
+        doc2-template-engine="mustache"
+        doc2-method="GET"
+        doc2-headers='{"x-forwarded-api": "pokeapi.co"}'
+        doc2-query-engine="JMESPath"
+        doc2-query="{name: name, sprites: {front: sprites.front_default, back: sprites.back_default}} ">
     {{#name}}
     <table>
         <thead>
