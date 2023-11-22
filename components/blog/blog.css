@@ -33,6 +33,10 @@ web-blog [slot="toc"] {
     margin-bottom: var(--size-400);
 }
 
+web-blog.no-toc [slot="toc"] {
+    display: none;
+}
+
 web-blog [slot="toc"] strong {
     display: block;
     margin-bottom: 16px;

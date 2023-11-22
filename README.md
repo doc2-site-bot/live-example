@@ -7,14 +7,15 @@ Powered by Web Components, the doc2.live service builts on top of the Web Platfo
 The demo showcases how the doc2.live service:
 - Delivers HTML pages on the project subdomain <https://demo.doc2.live>
 - Assembles and renders document fragments
-- Modifies the server side rendered HTML
+- Decorates HTML before sending it to the client 
+- Built-in server side experimentation 
 - Enhances HTML with client-side JavaScript and CSS hosted on Cloudflare Pages
 - Supports multi-branch and per commit preview e.g. <https://custom-hero-bg--preview--demo.doc2.live>
 - Delivers server-side rendered [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) with [Shadom DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - Embeds youtube video as web component
-- Renders sheet data with a given template
-- Lazy loaded components
-- Integrates [Turnstile](https://developers.cloudflare.com/turnstile/), Cloudflare’s smart CAPTCHA alternative to submit data to a sheet
+- Renders sheet data with dynamic templates
+- Lazy loaded components on interaction
+- Integrates [Turnstile](https://developers.cloudflare.com/turnstile/) to protect data submission to a sheet
 
 ## Live demo
 

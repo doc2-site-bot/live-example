@@ -14,6 +14,9 @@
       "select": {
         "body": {
           "class": "story"
+        },
+        "html:has(meta[name='user-agent'][content*='Firefox']) web-blog [slot='toc']": {
+          "class": "no-toc"
         }
       }
     },
