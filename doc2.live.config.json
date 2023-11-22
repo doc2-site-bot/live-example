@@ -15,7 +15,7 @@
         "body": {
           "class": "story"
         },
-        "html:has(meta[name='user-agent'][content*='Firefox']) web-blog [slot='toc']": {
+        "html:has(meta[name='user-agent'][content*='Firefox']) web-blog": {
           "class": "no-toc"
         }
       }
