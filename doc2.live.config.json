@@ -23,8 +23,6 @@
     {
       "select": {
         "header img": {
-          "width": 24,
-          "height": 24,
           "loading": "eager"
         },
         "header > p": {
