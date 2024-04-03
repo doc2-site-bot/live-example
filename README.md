@@ -2,7 +2,7 @@
 
 The demo shows how landing pages and blog-like pages can be created and rendered with the doc2.live service.
 
-Powered by Web Components, the doc2.live service builts on top of the Web Platform so you can be assured to create fast Web Experiences that will last.
+Powered by Web Components, the doc2.live service is built on top of the Web Platform so you can be assured to create fast Web Experiences that will last.
 
 The demo showcases how the doc2.live service:
 - Delivers HTML pages on the project subdomain <https://demo.doc2.live>
