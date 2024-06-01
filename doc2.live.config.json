@@ -47,6 +47,12 @@
         },
         "web-columns-item > p:has(a)": {
           "slot": "action"
+        },
+        "head:has(meta[name='route']) + body web-pokemon [doc2-source*='SEARCH_PARAMS']": {
+          "remove": true
+        },
+        "head:not(:has(meta[name='route'])) + body web-pokemon [doc2-source*='ROUTE_PARAMS']": {
+          "remove": true
         }
       }
     }
